@@ -11,7 +11,7 @@ const boxStyles = cva(
             },
             col: {
                 true: "flex flex-col"
-            }
+            },
         },
         defaultVariants: {
         },
@@ -21,12 +21,13 @@ const boxStyles = cva(
 interface BoxProps extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof boxStyles> {
     row?: boolean;
     col?: boolean;
+    gap?: string;
 }
 
-export const Box: React.FC<BoxProps> = ({ className, row, col, ...props }) => {
+export const Box: React.FC<BoxProps> = ({ className, row, col, gap, ...props }) => {
     const classes = boxStyles({ row, col });
 
     return (
-        <div className={clsx(classes, className)} {...props} />
+        <div className={clsx(classes, gap && `gap-${gap}`, className)} {...props} />
     );
 };
