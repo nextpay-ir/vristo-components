@@ -23,10 +23,8 @@ interface InputProps extends React.HTMLAttributes<HTMLElement>, VariantProps<typ
     placeholder?: string
 }
 
-const Input: React.FC<InputProps> = ({ className, size, isSuccess, isError, ...props }) => {
+export const Input: React.FC<InputProps> = ({ className, size, isSuccess, isError, ...props }) => {
     return (
         <input className={clsx(inputStyles({ size, isSuccess, isError }), className)} {...props} />
     );
 };
-
-export default Input;

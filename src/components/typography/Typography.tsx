@@ -37,12 +37,10 @@ interface TypographyProps extends VariantProps<typeof typographyStyles> {
   children: React.ReactNode;
 }
 
-const Typography: React.FC<TypographyProps> = ({ as: Tag = 'p', className, size, weight, color, children, ...props }) => {
+export const Typography: React.FC<TypographyProps> = ({ as: Tag = 'p', className, size, weight, color, children, ...props }) => {
   return (
     <Tag className={clsx(typographyStyles({ size, weight, color }), className)} {...props}>
       {children}
     </Tag>
   );
 };
-
-export default Typography;

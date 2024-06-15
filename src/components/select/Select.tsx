@@ -27,7 +27,7 @@ interface SelectProps extends React.HTMLAttributes<HTMLSelectElement>, VariantPr
     options?: Array<{ value: string; label: string }>;
 }
 
-const Select = React.forwardRef<HTMLSelectElement, SelectProps>(({ className, options, size, isError, isSuccess, ...props }, ref) => {
+export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(({ className, options, size, isError, isSuccess, ...props }, ref) => {
     return (
         <select
             ref={ref}
@@ -42,5 +42,3 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(({ className, op
         </select>
     );
 });
-
-export default Select

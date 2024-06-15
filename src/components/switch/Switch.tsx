@@ -16,7 +16,7 @@ interface SwitchProps extends React.HTMLAttributes<HTMLInputElement>, VariantPro
     value: string;
 }
 
-const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(({ className, value, id, ...props }, ref) => {
+export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(({ className, value, id, ...props }, ref) => {
     return (
         <label className="relative h-6 w-12">
             <input type="checkbox" ref={ref} value={value} className={clsx(switchStyles(), className)} {...props} id={id} />
@@ -24,5 +24,3 @@ const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(({ className, val
         </label>
     );
 });
-
-export default Switch;

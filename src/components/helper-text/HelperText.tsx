@@ -17,10 +17,8 @@ const helperStyles = cva(
 
 interface TextProps extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof helperStyles> { }
 
-const HelperText: React.FC<TextProps> = ({ className, isSuccess, isError, ...props }) => {
+export const HelperText: React.FC<TextProps> = ({ className, isSuccess, isError, ...props }) => {
     return (
         <p className={clsx(helperStyles({ isSuccess, isError }), className)} {...props} />
     );
 };
-
-export default HelperText;

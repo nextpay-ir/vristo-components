@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 const buttonStyles = cva(
-    'relative flex items-center gap-2 justify-center rounded-md border px-5 py-2 text-sm font-semibold shadow-[0_10px_20px_-10px] outline-none transition duration-300 hover:shadow-none',
+    'relative flex items-center gap-2 justify-center rounded-md border px-5 py-2 text-sm shadow-[0_10px_20px_-10px] outline-none transition duration-300 hover:shadow-none',
     {
         variants: {
             fill: {
@@ -28,6 +28,9 @@ const buttonStyles = cva(
                 small: 'px-2.5 py-1.5 text-xs',
                 large: 'px-7 py-2.5 text-base',
             },
+            fullWidth: {
+                true: "w-full"
+            }
         },
         defaultVariants: {
             // outline: 'primary',
@@ -40,7 +43,7 @@ interface ButtonProps extends React.HTMLAttributes<HTMLElement>, VariantProps<ty
     iconPosition?: 'left' | 'right';
 }
 
-const Button: React.FC<ButtonProps> = ({ className, outline, fill, size, icon, iconPosition = 'left', children, ...props }) => {
+export const Button: React.FC<ButtonProps> = ({ className, outline, fill, size, icon, iconPosition = 'left', fullWidth, children, ...props }) => {
     return (
         <button className={clsx(buttonStyles({ outline, fill, size }), className)} {...props}>
             {iconPosition === 'left' && icon && <span>{icon}</span>}
@@ -49,5 +52,3 @@ const Button: React.FC<ButtonProps> = ({ className, outline, fill, size, icon, i
         </button>
     );
 };
-
-export default Button;

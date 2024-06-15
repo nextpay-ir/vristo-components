@@ -1,13 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react'
+import path from 'path'
+import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [react()],
   build: {
     lib: {
-      entry: 'src/index.tsx',
-      name: 'MyComponentLibrary',
-      fileName: (format) => `my-component-library.${format}.js`,
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'vristo-components',
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -18,5 +19,8 @@ export default defineConfig({
         },
       },
     },
-  }
+    sourcemap: true,
+    emptyOutDir: true
+  },
+  plugins: [react(), dts()]
 });

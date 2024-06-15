@@ -27,9 +27,9 @@ interface RadioProps extends React.HTMLAttributes<HTMLInputElement>, VariantProp
     value: string;
 }
 
-const Radio = React.forwardRef<HTMLInputElement, RadioProps>(({ className, size, text, name, value, isError, ...props }, ref) => {
+export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(({ className, size, text, name, value, isError, ...props }, ref) => {
     return (
-        <label className="inline-flex items-center">
+        <label className="inline-flex items-center gap-1">
             <input
                 ref={ref}
                 type="radio"
@@ -42,5 +42,3 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(({ className, size,
         </label>
     );
 });
-
-export default Radio;

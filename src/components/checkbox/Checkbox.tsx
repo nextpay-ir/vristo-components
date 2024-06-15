@@ -26,7 +26,7 @@ interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement>, VariantP
     value: string;
 }
 
-const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(({ className, size, text, value, isError, ...props }, ref) => {
+export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(({ className, size, text, value, isError, ...props }, ref) => {
     return (
         <label className="inline-flex items-center">
             <input ref={ref} type="checkbox" className={clsx(checkboxStyles({ size, isError }), className)}
@@ -35,5 +35,3 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(({ className,
         </label>
     );
 });
-
-export default Checkbox;

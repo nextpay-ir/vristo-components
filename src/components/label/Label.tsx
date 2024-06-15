@@ -3,7 +3,7 @@ import { cva, VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 
 const labelStyles = cva(
-    'mb-1.5 block font-semibold',
+    'mb-1.5 block',
     {
         variants: {
             size: {
@@ -23,10 +23,8 @@ const labelStyles = cva(
 
 interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement>, VariantProps<typeof labelStyles> { }
 
-const Label: React.FC<LabelProps> = ({ className, size, isSuccess, isError, fontBold, ...props }) => {
+export const Label: React.FC<LabelProps> = ({ className, size, isSuccess, isError, fontBold, ...props }) => {
     return (
         <label className={clsx(labelStyles({ size, isSuccess, isError, fontBold }), className)} {...props} /> 
     );
 };
-
-export default Label;
