@@ -21,6 +21,6 @@
     "noFallthroughCasesInSwitch": true,
     "typeRoots": ["./dist/index.d.ts", "node_modules/@types"]
   },
-  "include": ["src", "./index.ts", "src/components/button/Button.stories.jsx", "src/components/label/Label.stories.jsx"],
+  "include": ["src", "./index.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
