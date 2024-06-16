@@ -11,10 +11,10 @@ const selectStyles = cva(
                 large: 'py-2.5 text-bas',
             },
             isError: {
-                true: "border-danger bg-danger/[0.08] focus:border-danger outline border-none outline-[1px]"
+                true: "!border-danger bg-danger/[0.08] focus:border-danger outline border-none outline-[1px]"
             },
             isSuccess: {
-                true: "border-success bg-success/[0.08] focus:border-success outline border-none outline-[1px]"
+                true: "!border-success bg-success/[0.08] focus:border-success outline border-none outline-[1px]"
             }
         },
         defaultVariants: {
