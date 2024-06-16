@@ -3,7 +3,7 @@ import { cva, VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 
 const selectStyles = cva(
-    'w-full rounded-md border border-white-light bg-white px-4 py-2 text-sm font-semibold text-black !outline-none focus:border-primary focus:ring-transparent dark:border-[#17263c] dark:bg-[#121e32] dark:text-white-dark dark:focus:border-primary',
+    'w-full rounded-md border border-white-light bg-white px-4 py-2 text-sm text-black !outline-none focus:border-primary focus:ring-transparent dark:border-[#17263c] dark:bg-[#121e32] dark:text-white-dark dark:focus:border-primary',
     {
         variants: {
             size: {
@@ -11,10 +11,10 @@ const selectStyles = cva(
                 large: 'py-2.5 text-bas',
             },
             isError: {
-                true: "border-danger bg-danger/[0.08] text-danger placeholder-danger/70 focus:border-danger"
+                true: "border-danger bg-danger/[0.08] focus:border-danger outline border-none outline-[1px]"
             },
             isSuccess: {
-                true: "border-success bg-success/[0.08] text-success placeholder-success/70 focus:border-success"
+                true: "border-success bg-success/[0.08] focus:border-success outline border-none outline-[1px]"
             }
         },
         defaultVariants: {
