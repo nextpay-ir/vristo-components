@@ -21,10 +21,11 @@ const inputStyles = cva(
 
 interface InputProps extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof inputStyles> {
     placeholder?: string
+    type?: string
 }
 
-export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ className, size, isSuccess, isError, ...props }, ref) => {
+export const Input = React.forwardRef<HTMLInputElement, InputProps>(({ className, size, isSuccess, isError, type, ...props }, ref) => {
     return (
-        <input ref={ref} className={clsx(inputStyles({ size, isSuccess, isError }), className)} {...props} />
+        <input type={type} ref={ref} className={clsx(inputStyles({ size, isSuccess, isError }), className)} {...props} />
     );
 });
