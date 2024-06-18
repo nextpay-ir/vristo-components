@@ -42,3 +42,35 @@ CustomClass.args = {
     isSuccess: false,
     isError: false,
 };
+
+export const ExtraHelperText = Template.bind({});
+ExtraHelperText.args = {
+    children: 'This is a extra small helper text',
+    isSuccess: false,
+    isError: false,
+    size: "extraSmall"
+};
+
+export const SmallHelper = Template.bind({});
+SmallHelper.args = {
+    children: 'This is a small helper text',
+    isSuccess: false,
+    isError: false,
+    size: "small"
+};
+
+export const MediumHelper = Template.bind({});
+MediumHelper.args = {
+    children: 'This is a medium helper text',
+    isSuccess: false,
+    isError: false,
+    size: "medium"
+};
+
+export const LargeHelper = Template.bind({});
+LargeHelper.args = {
+    children: 'This is a large helper text',
+    isSuccess: false,
+    isError: false,
+    size: "large"
+};
