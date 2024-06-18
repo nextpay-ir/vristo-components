@@ -30,6 +30,9 @@ const buttonStyles = cva(
             },
             fullWidth: {
                 true: "w-full"
+            },
+            disabled: {
+                true: "opacity-50 bg-gray-300 cursor-not-allowed border-gray-300"
             }
         },
         defaultVariants: {
@@ -41,11 +44,12 @@ const buttonStyles = cva(
 interface ButtonProps extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof buttonStyles> {
     icon?: React.ReactNode;
     iconPosition?: 'left' | 'right';
+    disabled?: boolean
 }
 
-export const Button: React.FC<ButtonProps> = ({ className, outline, fill, size, icon, iconPosition = 'left', fullWidth, children, ...props }) => {
+export const Button: React.FC<ButtonProps> = ({ className, outline, fill, size, icon, iconPosition = 'left', fullWidth, disabled, children, ...props }) => {
     return (
-        <button className={clsx(buttonStyles({ outline, fill, size }), className)} {...props}>
+        <button disabled={disabled} className={clsx(buttonStyles({ outline, fill, size, disabled }), className)} {...props}>
             {iconPosition === 'left' && icon && <span>{icon}</span>}
             {children}
             {iconPosition === 'right' && icon && <span>{icon}</span>}
