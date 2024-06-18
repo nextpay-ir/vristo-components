@@ -1,9 +1,9 @@
-import React from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
+import React from 'react';
 
 const labelStyles = cva(
-    'mb-1.5 block',
+    'block',
     {
         variants: {
             size: {
@@ -21,10 +21,19 @@ const labelStyles = cva(
     }
 );
 
-interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement>, VariantProps<typeof labelStyles> { }
+interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement>, VariantProps<typeof labelStyles> {
+    isRequired?: boolean
+}
 
-export const Label: React.FC<LabelProps> = ({ className, size, isSuccess, isError, fontBold, ...props }) => {
+export const Label: React.FC<LabelProps> = ({ className, isRequired, size, isSuccess, isError, fontBold, ...props }) => {
     return (
-        <label className={clsx(labelStyles({ size, isSuccess, isError, fontBold }), className)} {...props} /> 
+        <div className='flex mb-1.5 items-baseline gap-0.5'>
+            <label className={clsx(labelStyles({ size, isSuccess, isError, fontBold }), className)} {...props} />
+            {isRequired && (
+                <div className="text-danger font-bold">
+                    *
+                </div>
+            )}
+        </div>
     );
 };

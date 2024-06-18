@@ -74,3 +74,11 @@ ErrorBold.args = {
     fontBold: true,
     children: 'Error Bold Label',
 };
+
+export const Required = Template.bind({});
+Required.args = {
+    isError: false,
+    children: 'required Label',
+    size: "small",
+    isRequired: true
+};
