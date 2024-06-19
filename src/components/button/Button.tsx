@@ -32,11 +32,10 @@ const buttonStyles = cva(
                 true: "w-full"
             },
             disabled: {
-                true: "opacity-50 bg-gray-300 cursor-not-allowed border-gray-300"
+                true: "!opacity-50 !bg-gray-300 cursor-not-allowed !border-gray-300"
             }
         },
         defaultVariants: {
-            // outline: 'primary',
         },
     }
 );
