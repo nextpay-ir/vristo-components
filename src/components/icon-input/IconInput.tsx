@@ -30,7 +30,7 @@ interface IconInputProps extends React.HTMLAttributes<HTMLInputElement>, Variant
 export const IconInput: React.FC<IconInputProps> = ({ className, label, icon, isSuccess, isError, size, type, iconPosition = 'left', ...props }) => {
     return (
         <div>
-            {label && <Label className="mb-1.5" size="medium" htmlFor={props.id}>{label}</Label>}
+            {label && <Label size="medium" htmlFor={props.id}>{label}</Label>}
             <div className={clsx(iconInputStyles({ iconPosition }), className)}>
                 <Icon icon={icon} width={20} height={20} className={`absolute top-1/2 transform -translate-y-1/2 text-black dark:text-white ${iconPosition == "left" ? "left-3" : "right-3"}`} />
                 <Input type={type} {...props} isSuccess={isSuccess} isError={isError} size={size} className={iconPosition == "left" ? "pl-9" : "pr-3"} />

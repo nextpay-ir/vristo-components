@@ -84,3 +84,12 @@ Danger.args = {
     weight: 'normal',
     color: 'danger',
 };
+
+export const Black = Template.bind({});
+Black.args = {
+    children: 'This is a black typography component',
+    as: 'p',
+    size: 'medium',
+    weight: 'normal',
+    color: 'black',
+};

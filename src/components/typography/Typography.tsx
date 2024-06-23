@@ -21,12 +21,13 @@ const typographyStyles = cva(
         secondary: 'text-secondary',
         success: 'text-success',
         danger: 'text-danger',
+        black: "text-black"
       },
     },
     defaultVariants: {
       size: 'medium',
       weight: 'normal',
-      color: 'primary',
+      color: 'black',
     },
   }
 );

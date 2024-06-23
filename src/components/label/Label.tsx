@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 const labelStyles = cva(
-    'block',
+    'block pr-1',
     {
         variants: {
             size: {
@@ -17,7 +17,9 @@ const labelStyles = cva(
                 true: "font-bold"
             },
         },
-        defaultVariants: {},
+        defaultVariants: {
+            
+        },
     }
 );
 
