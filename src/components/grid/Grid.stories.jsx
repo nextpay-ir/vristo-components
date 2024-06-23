@@ -34,17 +34,17 @@ export default {
 
 const Template = (args) => (
     <Grid container spacing={args.spacing}>
-        <Grid item xs={8}>
-            <div className="bg-red-200 p-4">xs=8</div>
+        <Grid item xs={3}>
+            <div className="bg-red-200 p-4">xs=3</div>
         </Grid>
-        <Grid item xs={4}>
-            <div className="bg-blue-200 p-4">xs=4</div>
+        <Grid item xs={3}>
+            <div className="bg-blue-200 p-4">xs=3</div>
         </Grid>
-        <Grid item xs={4}>
-            <div className="bg-yellow-200 p-4">xs=4</div>
+        <Grid item xs={3}>
+            <div className="bg-yellow-200 p-4">xs=3</div>
         </Grid>
-        <Grid item xs={8}>
-            <div className="bg-slate-200 p-4">xs=8</div>
+        <Grid item xs={2}>
+            <div className="bg-slate-200 p-4">xs=2</div>
         </Grid>
     </Grid>
 );

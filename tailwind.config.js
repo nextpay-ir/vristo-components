@@ -1,5 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+    purge: {
+        content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+        safelist: [
+            {
+                pattern:
+                    /^(gap|col-span|xs:col-span|sm:col-span|md:col-span|lg:col-span|xl:col-span)-[0-9]+$/,
+                variants: ['xs', 'sm', 'md', 'lg', 'xl'],
+            },
+        ],
+    },
     content: [
         './index.html',
         './src/**/*.{js,ts,jsx,tsx}',
