@@ -4,6 +4,7 @@ import {
   flexRender,
   getCoreRowModel,
   PaginationState,
+  Updater,
   // usePagination,
 } from "@tanstack/react-table";
 import clsx from "clsx";
@@ -21,10 +22,9 @@ interface DataGridProps<T> {
   columns: ColumnDef<T>[];
   getRowId: (row: T) => string;
   paginationModel: PaginationState;
-  onPaginationModelChange: (newModel: PaginationState) => void;
+  onPaginationModelChange: (newModel: Updater<PaginationState>) => void; // Change the type here
   className?: string;
 }
-
 export const DataGrid = <T extends object>({
   data,
   columns,
@@ -59,9 +59,9 @@ export const DataGrid = <T extends object>({
                   {header.isPlaceholder
                     ? null
                     : flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )}
+                      header.column.columnDef.header,
+                      header.getContext()
+                    )}
                 </th>
               ))}
             </tr>
