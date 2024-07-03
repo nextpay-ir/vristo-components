@@ -56,3 +56,9 @@ WithCustomClass.args = {
     placeholder: 'Enter text...',
     className: 'custom-input-class',
 };
+
+export const disabled = Template.bind({});
+disabled.args = {
+    placeholder: 'Enter text...',
+    disabled: true
+};
