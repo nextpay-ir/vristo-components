@@ -12,6 +12,14 @@ const boxStyles = cva(
             col: {
                 true: "flex flex-col"
             },
+            justifyContent: {
+                start: 'justify-start',
+                center: 'justify-center',
+                end: 'justify-end',
+                between: 'justify-between',
+                around: 'justify-around',
+                evenly: 'justify-evenly'
+            },
         },
         defaultVariants: {
         },
@@ -22,9 +30,10 @@ interface BoxProps extends React.HTMLAttributes<HTMLElement>, VariantProps<typeo
     row?: boolean;
     col?: boolean;
     gap?: string;
+    justifyContent?: 'start' | 'center' | 'end' | 'between' | 'around' | 'evenly';
 }
 
-export const Box: React.FC<BoxProps> = ({ className, row, col, gap, ...props }) => {
+export const Box: React.FC<BoxProps> = ({ className, row, col, gap, justifyContent, ...props }) => {
     const classes = boxStyles({ row, col });
 
     return (
