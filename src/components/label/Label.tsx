@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 const labelStyles = cva(
-    'block pr-1',
+    'block pr-1 dark:text-white-dark',
     {
         variants: {
             size: {

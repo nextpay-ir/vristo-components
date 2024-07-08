@@ -3,7 +3,7 @@ import { cva, VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 
 const helperStyles = cva(
-    'mt-1',
+    'mt-1 dark:text-white-dark',
     {
         variants: {
             size: {

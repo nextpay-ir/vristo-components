@@ -3,7 +3,7 @@ import { cva, VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 
 const inputStyles = cva(
-    'w-full rounded-md border border-white-light bg-white px-4 py-2 text-sm text-black !outline-none focus:border-primary focus:ring-transparent',
+    'w-full rounded-md border border-white-light bg-white px-4 py-2 text-sm text-black !outline-none focus:border-primary focus:ring-transparent dark:bg-[#121e32] dark:border-[#17263c] dark:text-white-dark',
     {
         variants: {
             size: {
