@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Modal } from "./Modal";
+import { Modal } from "./Dialog.js";
 import { Icon } from "@iconify/react";
 
 export default {
