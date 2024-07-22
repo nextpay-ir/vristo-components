@@ -4,11 +4,7 @@ import React from 'react';
 
 const skeletonStyles = cva('bg-gray-200 animate-pulse rounded');
 
-interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof skeletonStyles> {
-    height?: "custom" | string;
-    width?: "custom" | string;
-    isLoaded?: boolean;
-}
+interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof skeletonStyles> {}
 
 export const Skeleton: React.FC<SkeletonProps> = ({className, ...props}) => {
     const customStyles: React.CSSProperties = {};
