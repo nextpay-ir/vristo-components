@@ -27,5 +27,6 @@ export const Alert = async (props: swalTypes) => {
         icon: icon,
         title: title,
         padding: '10px 20px',
+        customClass: 'text-xs h-fit sm:text-base !text-black !bg-white dark:!text-gray-00 dark:!bg-slate-600'
     });
 };
